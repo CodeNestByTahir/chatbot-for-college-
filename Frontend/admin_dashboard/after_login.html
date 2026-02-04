@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN DASHBOARD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- start of department management -->
+    <div class="department_management">
+        <h2>Department Management</h2>
+        <hr>
+        <form action="" id="department" method="get">
+            <input type="text" id="department_name" placeholder="Department Name (e.g., Computer Science)">
+            <button type="submit" id="add_department">ADD DEPARTMENT</button>
+        </form>
+
+        <dv id="department_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Department Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="department_table_data">
+                    <tr>
+                        <td>1</td>
+                        <td>Computer Application</td>
+                        <td>DELETE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </dv>
+    </div>
+
+    <!-- end of department management -->
+
+    <!-- start of teacher management -->
+    <div class="teacher_management">
+
+        <h2>Teacher Management</h2>
+        <hr>
+        <form action="" id="teacher" method="get">
+            <input class="inp_2" type="text" id="teacher_name" placeholder="Teacher Name">
+            <input class="inp_2"type="text" id="teacher_designation" placeholder="Designation (e.g., HOD)">
+            <select class="inp_2"name="department_name">
+                <option class="inp_2"value="">Select Department</option>
+            </select>
+            <input class="inp_2"type="text" id="teacher_email" placeholder="Email">
+            <input class="inp_2"type="text" id="teacher_contact_number" placeholder="Contact Number">
+            <button type="submit" id="add_teacher">Add Teacher</button>
+        </form>
+        <div id="teacher_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="teacher_table_data">
+                    <tr>
+                        <td>Darshan</td>
+                        <td>Student</td>
+                        <td>Computer Application</td>
+                        <td>drashannikam64@gmail.com</td>
+                        <td>9767041200</td>
+                        <td>DELETE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- end of teacher management -->
+
+
+    <!-- start of announcement management -->
+    <div class="announcement_management">
+        <h2>Announcement Management</h2>
+        <hr>
+        <form action="" method="get">
+            <input class="inp_2"type="text" placeholder="Title">
+            <input class="inp_2"type="text" placeholder="Description">
+            <input class="inp_2"type="date" name="" id="date" placeholder="select date">
+            <button id="add_announcement">Add Announcement</button>
+        </form>
+
+        <div id="announcement_table">
+            <table>
+                <tHead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>End Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </tHead>
+
+                <tBody id="announcement_table_data">
+                    <tr>
+                        <td>Project</td>
+                        <td>Project Presentation</td>
+                        <td>16-JAN-2026</td>
+                        <td>EDIT</td>
+                    </tr>
+                </tBody>
+
+            </table>
+        </div>
+
+    </div>
+    <!-- end of announcement management -->
+
+
+    <!-- start of failed reqest management -->
+    <div class="failed_request_management">
+        <h2>Failed Request Management</h2>
+        <hr>
+        <div id="failed_request_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Request</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="failed_request_table_data">
+                    <tr>
+                        <td>1</td>
+                        <td>What is the college Name</td>
+                        <td>ADD Request</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- end of failed reqest management -->
+
+
+    <!-- start of FAQ management -->
+    <div class="faq_management">
+        <h2>FAQs Management</h2>
+        <hr>
+        <form action="" method="get">
+            <input class="inp_2"type="text" placeholder="Question">
+            <input class="inp_2"type="text" placeholder="Answer">
+            <input class="inp_2"type="text" placeholder="Intents / Keywords">
+            <button id="add_faq">ADD FAQ</button>
+        </form>
+
+        <div id="faq_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                        <th>Intents / Keywords</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="faq_table_data">
+                    <tr>
+                        <td>what is the college Name</td>
+                        <td>The college name is shri sai baba college shirdi.</td>
+                        <td>Clg Name</td>
+                        <td>DELETE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Endof FAQ management -->
+</body>
+
+</html>

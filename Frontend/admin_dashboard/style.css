@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #08262c;
+}
+
+
+.hide{
+    display:none;
+}
+
+
+.admin_authentication {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*  center horizontaly */
+    align-items: center;
+    /* center vertically */
+
+}
+
+#admin_login{
+    background-color: #124a59;
+    height: 340px;
+    width: 390px;
+    text-align: center;
+    border-radius: 25px;
+}
+#reset_pass,
+#otp_pass {
+    background-color: #124a59;
+    height: 320px;
+    width: 390px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+@media (max-width:420px) {
+
+    #admin_login,
+    #reset_pass,
+    #otp_pass {
+        max-width: 300px;
+    }
+
+    #lg_btn,
+    #reset_password_btn {
+        padding: 10px 36.5%;
+    }
+
+    #request_otp {
+        padding: 15px 30px;
+    }
+
+    #pass_reset_p {
+        font-size: 17px;
+        margin-right: -50px;
+    }
+
+}
+
+#admin_login h1,
+#reset_pass h1,
+#otp_pass h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-bottom: solid 2px #fff;
+    padding-bottom: 20px;
+
+}
+
+input {
+    width: 90%;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #08262c;
+    border: solid .1em #868686;
+    /* border: solid 2px rgb(33, 88, 130); */
+    color: aliceblue;
+
+    font-size: 17px;
+}
+
+#admin_login button,#reset_pass button,
+#otp_pass button {
+    padding: 8px 39%;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #91b0ff;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+#admin_login button:hover,
+#reset_pass button:hover,
+#otp_pass button:hover {
+    background-color: #85a6f8;
+
+}
+
+#lg_btn:active {
+    background-color: #6e96fc;
+    transition: ease-in-out .1s;
+}
+
+#admin_login p,
+#reset_pass p,
+#otp_pass p {
+    color: #91b0ff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#admin_login p:hover,
+#reset_pass p:hover {
+    color: #85a6f8;
+}
+
+#reset_pass button {
+    padding: 13px 75px;
+}
+
+#pass_reset_p {
+    margin-bottom: 20px;
+    margin-left: -70px;
+    color: #ffffff;
+}
+
+#otp_pass h1 {
+    font-size: 25px;
+}
+
+#otp_pass {
+    height: auto;
+}
+
+#reset_password_btn {
+    padding: 10px 84px;
+    margin-bottom: 30px;
+}
+
+
+#otp_pass,
+#admin_login,
+#reset_pass {
+    box-shadow: 10px 10px 20px #030c0e;
+}
+
+
+/* After Admin login */
+
+
+/* Department Management */
+.department_management {
+    margin-top: 20px;
+    width: 97vw;
+    background-color: #124a59;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.department_management hr {
+    color: #ffffff;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+
+.department_management h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.department_management input {
+    width: 65%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+#add_department {
+    background-color: #6e96fc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+#department_table {
+    background-color: #08262c;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 98%;
+    justify-self: center;
+    align-self: center;
+}
+
+#department_table thead {
+    color: #fff;
+}
+
+#department_table_data {
+    color: #fff;
+}
+
+
+
+/* Teacher Management */
+.teacher_management {
+    margin-top: 20px;
+    width: 97vw;
+    background-color: #124a59;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.teacher_management hr {
+    color: #ffffff;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+.teacher_management h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.teacher_management input {
+    width: 45%;
+    margin-left: 20px;
+    /* margin-right: 10px; */
+}
+
+select {
+    background-color: #08262c;
+    width: 45%;
+    margin-left: 20px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: solid .1em #868686;
+    margin-bottom: 20px;
+    color: #868686;
+    font-size: 17px;
+}
+
+#add_teacher {
+    background-color: #6e96fc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+#teacher_table {
+    background-color: #08262c;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 98%;
+    justify-self: center;
+    align-self: center;
+}
+
+/* darshan */
+#teacher_table thead {
+    color: #fff;
+}
+
+#teacher_table_data {
+    color: #fff;
+}
+
+
+/* Announcement Management  */
+
+.announcement_management {
+    margin-top: 20px;
+    width: 97vw;
+    background-color: #124a59;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.announcement_management hr {
+    color: #ffffff;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+.announcement_management h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.announcement_management input {
+    width: 45%;
+    margin-left: 20px;
+    /* margin-right: 10px; */
+}
+
+#date {
+    color: #868686;
+}
+
+#add_announcement {
+    background-color: #6e96fc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+
+#announcement_table {
+    background-color: #08262c;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 98%;
+    justify-self: center;
+    align-self: center;
+}
+
+#announcement_table thead {
+    color: #fff;
+}
+
+#announcement_table_data {
+    color: #fff;
+}
+
+
+/* Failed student request management */
+.failed_request_management {
+    margin-top: 20px;
+    width: 97vw;
+    background-color: #124a59;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.failed_request_management h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.failed_request_management hr {
+    color: #ffffff;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+#failed_request_table {
+    background-color: #08262c;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 98%;
+    justify-self: center;
+    align-self: center;
+}
+
+#failed_request_table thead {
+    color: #fff;
+}
+
+#failed_request_table_data {
+    color: #fff;
+}
+
+
+/* FAQs management  */
+
+.faq_management {
+    margin-top: 20px;
+    width: 97vw;
+    background-color: #124a59;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+.faq_management hr {
+    color: #ffffff;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+.faq_management h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.faq_management input {
+    width: 45%;
+    margin-left: 20px;
+    /* margin-right: 10px; */
+}
+
+#add_faq {
+    background-color: #6e96fc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+
+#faq_table {
+    background-color: #08262c;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 98%;
+    justify-self: center;
+    align-self: center;
+}
+
+#faq_table thead {
+    color: #fff;
+}
+
+#faq_table_data {
+    color: #fff;
+}
+
+
+/* mobile responsive */
+@media (max-width:480px) {
+
+    .department_management,
+    .teacher_management,
+    .announcement_management,
+    .failed_request_management,
+    .faq_management {
+        max-width: 320px;
+    }
+
+    input,
+    select {
+        width: 90% !important;
+        /* Forces them to fill the container */
+
+    }
+
+    #add_department,
+    #add_teacher,
+    #add_announcement,
+    #add_faq {
+        margin-bottom: 20px;
+        width: 89%;
+        font-size: 17px;
+    }
+}
+
+
+#teacher_table,
+#announcement_table,
+#failed_request_table,
+#faq_table {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 600px;
+    padding: 10px;
+}
+
+
+th,
+td {
+    padding: 15px;
+}
+
+th,
+td {
+    border-bottom: solid 2px #868686;
+}
+
+
+/* Scrollbar color */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #030c0e;
+    border-radius: 7px;
+    margin: 20px 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #124a59;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #103f4d;
+    transition: ease-in-out .1s;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    border-radius: 5px;
+}
