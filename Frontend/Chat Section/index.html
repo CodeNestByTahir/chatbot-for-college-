@@ -67,10 +67,10 @@ Interested students should register with the concerned faculty at the earliest
             <div class="bot-msg">Hey! I’m Campus Buddy, your virtual assistant for Saibaba College </div>
         </div>
         
-        <div class="chat-body">
-            <div class="bot-reply">Hello! How can I help you?</div>
+        <div class="chat-body" id="chat-body">
+            <!-- <div class="bot-reply">Hello! How can I help you?</div>
             <div class="user-msg">What is admission process?</div>
-            <div class="bot-reply">You can apply online via college portal.</div>
+            <div class="bot-reply">You can apply online via college portal.</div> -->
         </div>
 
         <!-- Input Area -->
@@ -81,8 +81,8 @@ Interested students should register with the concerned faculty at the earliest
             <button>College time table ?</button>
             </div>
             <div class="input-box">
-            <input type="text" placeholder="Type here question" />
-            <button class="send-btn">Send</button>
+            <input type="text" id="user-input" placeholder="Type here question" />
+            <button class="send-btn" id="send-btn"onclick="sendMessage()">Send</button>
             </div>
         </div>
         </section>

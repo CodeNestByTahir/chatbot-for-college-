@@ -11,8 +11,8 @@ body {
 }
 
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
 
@@ -28,13 +28,14 @@ body {
 
 }
 
-#admin_login{
+#admin_login {
     background-color: #124a59;
     height: 340px;
     width: 390px;
     text-align: center;
     border-radius: 25px;
 }
+
 #reset_pass,
 #otp_pass {
     background-color: #124a59;
@@ -54,7 +55,8 @@ body {
 
     #lg_btn,
     #reset_password_btn {
-        padding: 10px 36.5%;
+        width: 90%;
+        text-align: center;
     }
 
     #request_otp {
@@ -90,20 +92,39 @@ input {
     border: solid .1em #868686;
     /* border: solid 2px rgb(33, 88, 130); */
     color: aliceblue;
-
+    box-shadow: 10px 10px 20px #030c0e;
     font-size: 17px;
 }
 
-#admin_login button,#reset_pass button,
+.admin_authentication input {
+    box-shadow: inset 10px 10px 20px #030c0e;
+}
+
+#admin_login button,
+#reset_pass button,
 #otp_pass button {
-    padding: 8px 39%;
+    width: 87%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: none;
     border-radius: 25px;
     margin-bottom: 20px;
     background-color: #91b0ff;
     font-size: 19px;
     cursor: pointer;
+    align-items: center;
+    white-space: nowrap;
+    box-shadow: 10px 10px 20px #030c0e;
 }
+
+/* #reset_pass button {
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #91b0ff;
+    width: 90%;
+    
+} */
 
 #admin_login button:hover,
 #reset_pass button:hover,
@@ -174,6 +195,8 @@ input {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    box-shadow: 10px 10px 20px #030c0e;
+
 }
 
 .department_management hr {
@@ -198,6 +221,7 @@ input {
     width: 65%;
     margin-left: 20px;
     margin-right: 20px;
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 
@@ -207,6 +231,8 @@ input {
     border: none;
     border-radius: 25px;
     margin-left: 20px;
+    box-shadow: 10px 10px 20px #030c0e;
+    cursor: pointer;
 }
 
 #department_table {
@@ -216,6 +242,7 @@ input {
     width: 98%;
     justify-self: center;
     align-self: center;
+    box-shadow: inset 10px 10px 30px #030c0e;
 }
 
 #department_table thead {
@@ -238,6 +265,7 @@ input {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 .teacher_management hr {
@@ -261,6 +289,7 @@ input {
     width: 45%;
     margin-left: 20px;
     /* margin-right: 10px; */
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 select {
@@ -273,6 +302,7 @@ select {
     margin-bottom: 20px;
     color: #868686;
     font-size: 17px;
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 #add_teacher {
@@ -282,6 +312,8 @@ select {
     border-radius: 25px;
     margin-left: 20px;
     font-size: 17px;
+    box-shadow: 10px 10px 20px #030c0e;
+    cursor: pointer;
 }
 
 #teacher_table {
@@ -291,6 +323,7 @@ select {
     width: 98%;
     justify-self: center;
     align-self: center;
+    box-shadow: inset 10px 10px 30px #030c0e;
 }
 
 /* darshan */
@@ -314,6 +347,7 @@ select {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 .announcement_management hr {
@@ -337,6 +371,7 @@ select {
     width: 45%;
     margin-left: 20px;
     /* margin-right: 10px; */
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 #date {
@@ -350,6 +385,8 @@ select {
     border-radius: 25px;
     margin-left: 20px;
     font-size: 17px;
+    box-shadow: 10px 10px 20px #030c0e;
+    cursor: pointer;
 }
 
 
@@ -360,6 +397,7 @@ select {
     width: 98%;
     justify-self: center;
     align-self: center;
+    box-shadow: inset 10px 10px 30px #030c0e;
 }
 
 #announcement_table thead {
@@ -381,6 +419,7 @@ select {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 .failed_request_management h2 {
@@ -406,6 +445,7 @@ select {
     width: 98%;
     justify-self: center;
     align-self: center;
+    box-shadow: inset 10px 10px 30px #030c0e;
 }
 
 #failed_request_table thead {
@@ -429,6 +469,7 @@ select {
     flex-direction: column;
     justify-self: center;
     margin-bottom: 20px;
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 .faq_management hr {
@@ -452,6 +493,7 @@ select {
     width: 45%;
     margin-left: 20px;
     /* margin-right: 10px; */
+    box-shadow: 10px 10px 20px #030c0e;
 }
 
 #add_faq {
@@ -461,6 +503,8 @@ select {
     border-radius: 25px;
     margin-left: 20px;
     font-size: 17px;
+    box-shadow: 10px 10px 20px #030c0e;
+    cursor: pointer;
 }
 
 
@@ -471,6 +515,7 @@ select {
     width: 98%;
     justify-self: center;
     align-self: center;
+    box-shadow: inset 10px 10px 30px #030c0e;
 }
 
 #faq_table thead {
@@ -482,8 +527,21 @@ select {
 }
 
 
+#after_successfull_login,
+#reset_pass,
+#otp_pass {
+    display: none;
+}
+
+.admin_authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 /* mobile responsive */
-@media (max-width:480px) {
+@media (max-width:768px) {
 
     .department_management,
     .teacher_management,
@@ -508,8 +566,25 @@ select {
         width: 89%;
         font-size: 17px;
     }
+
+    #add_department {
+        margin-bottom: 20px;
+    }
 }
 
+#after_successfull_login button {
+    right: 0;
+}
+
+button:hover {
+    transform: scale(0.99);
+    transition: .3s;
+}
+
+button:active {
+    transform: scale(1.01);
+    transition: .3s;
+}
 
 #teacher_table,
 #announcement_table,
