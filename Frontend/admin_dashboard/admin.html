@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:,">
+    <title>Admin Login | Shri Saibaba College Assistant</title>
+
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" href="./Assets/seniorclglogo.jpeg">
 </head>
 
 <body>
@@ -49,28 +50,25 @@
             <h2>Department Management</h2>
             <hr>
             <form action="" id="department" method="get">
+                <input type="text" hidden id="real_department_id" placeholder="Real department ID">
                 <input type="text" id="department_name" placeholder="Department Name (e.g., Computer Science)" required>
-                <button type="submit" id="add_department">ADD DEPARTMENT</button>
+                <button type="submit" id="add_department">Add Department</button>
             </form>
 
-            <dv id="department_table">
+            <div id="department_table">
                 <table>
                     <thead>
                         <tr>
+                            <th hidden>Real Id</th>
                             <th>ID</th>
                             <th>Department Name</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody id="department_table_data">
-                        <tr>
-                            <td>1</td>
-                            <td>Computer Application</td>
-                            <td>DELETE</td>
-                        </tr>
                     </tbody>
                 </table>
-            </dv>
+            </div>
         </div>
 
         <!-- end of department management -->
@@ -80,11 +78,12 @@
 
             <h2>Teacher Management</h2>
             <hr>
-            <form action="" id="teacher" method="get">
+            <form action="" id="teacher_form">
+                <input type="text" hidden id="real_teacher_id" placeholder="Real Teacher ID">
                 <input class="inp_2" type="text" id="teacher_name" placeholder="Teacher Name" required>
                 <input class="inp_2" type="text" id="teacher_designation" placeholder="Designation (e.g., HOD)"
                     required>
-                <select class="inp_2" name="department_name">
+                <select class="inp_2" id="teacher_dept_select">
                     <option class="inp_2" value="">Select Department</option>
                 </select>
                 <input class="inp_2" type="text" id="teacher_email" placeholder="Email" required>
@@ -95,6 +94,8 @@
                 <table>
                     <thead>
                         <tr>
+                            <th hidden>Real ID</th>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Designation</th>
                             <th>Department</th>
@@ -105,14 +106,6 @@
                     </thead>
 
                     <tbody id="teacher_table_data">
-                        <tr>
-                            <td>Darshan</td>
-                            <td>Student</td>
-                            <td>Computer Application</td>
-                            <td>drashannikam64@gmail.com</td>
-                            <td>9767041200</td>
-                            <td>DELETE</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -124,9 +117,10 @@
         <div class="announcement_management">
             <h2>Announcement Management</h2>
             <hr>
-            <form action="" method="get">
-                <input class="inp_2" type="text" placeholder="Title">
-                <input class="inp_2" type="text" placeholder="Description">
+            <form id="announcement_form">
+                <input type="text" hidden id="real_announcement_id" placeholder="Real department ID">
+                <input class="inp_2" type="text" id="title" placeholder="Title">
+                <input class="inp_2" type="text" id="description" placeholder="Description">
                 <input class="inp_2" type="date" name="" id="date" placeholder="select date" required>
                 <button id="add_announcement">Add Announcement</button>
             </form>
@@ -135,6 +129,7 @@
                 <table>
                     <tHead>
                         <tr>
+                            <th hidden>Real ID</th>
                             <th>Title</th>
                             <th>Description</th>
                             <th>End Date</th>
@@ -143,12 +138,6 @@
                     </tHead>
 
                     <tBody id="announcement_table_data">
-                        <tr>
-                            <td>Project</td>
-                            <td>Project Presentation</td>
-                            <td>16-JAN-2026</td>
-                            <td>EDIT</td>
-                        </tr>
                     </tBody>
 
                 </table>
@@ -166,6 +155,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th hidden>Real ID</th>
                             <th>ID</th>
                             <th>Request</th>
                             <th>Actions</th>
@@ -175,6 +165,7 @@
                     <tbody id="failed_request_table_data">
                         <tr>
                             <td>1</td>
+                            <td>2</td>
                             <td>What is the college Name</td>
                             <td>ADD Request</td>
                         </tr>
@@ -189,17 +180,20 @@
         <div class="faq_management">
             <h2>FAQs Management</h2>
             <hr>
-            <form action="" method="get">
-                <input class="inp_2" type="text" placeholder="Question" required>
-                <input class="inp_2" type="text" placeholder="Answer" required>
-                <input class="inp_2" type="text" placeholder="Intents / Keywords" required>
-                <button id="add_faq">ADD FAQ</button>
+            <form id="faq_form">
+                <input type="text" hidden id="real_faq_id" placeholder="Real department ID">
+                <input class="inp_2" id="question" type="text" placeholder="Question" required>
+                <input class="inp_2" id="answer" type="text" placeholder="Answer" required>
+                <input class="inp_2" id="intents" type="text" placeholder="Intents / Keywords" required>
+                <button id="add_faq">Add FAQ</button>
             </form>
 
             <div id="faq_table">
                 <table>
                     <thead>
                         <tr>
+                            <td hidden>Real ID</td>
+                            <th>ID</th>
                             <th>Question</th>
                             <th>Answer</th>
                             <th>Intents / Keywords</th>
@@ -209,6 +203,8 @@
 
                     <tbody id="faq_table_data">
                         <tr>
+                            <td>1</td>
+                            <td>2</td>
                             <td>what is the college Name</td>
                             <td>The college name is shri sai baba college shirdi.</td>
                             <td>Clg Name</td>
