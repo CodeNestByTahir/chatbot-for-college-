@@ -101,8 +101,7 @@ input {
 }
 
 #admin_login button,
-#reset_pass button,
-#otp_pass button {
+#reset_pass button {
     width: 87%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -114,6 +113,19 @@ input {
     cursor: pointer;
     align-items: center;
     white-space: nowrap;
+    box-shadow: 10px 10px 20px #030c0e;
+}
+
+#otp_pass button {
+    width: 87%;
+    background-color: #91b0ff;
+    font-size: 19px;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 20px;
     box-shadow: 10px 10px 20px #030c0e;
 }
 
@@ -231,11 +243,17 @@ input {
     border: none;
     border-radius: 25px;
     margin-left: 20px;
+    font-size: 17px;
     box-shadow: 10px 10px 20px #030c0e;
     cursor: pointer;
+
 }
 
-#department_table {
+#department_table,
+#teacher_table,
+#announcement_table,
+#failed_request_table,
+#faq_table {
     background-color: #08262c;
     border-radius: 25px;
     margin-bottom: 20px;
@@ -243,14 +261,26 @@ input {
     justify-self: center;
     align-self: center;
     box-shadow: inset 10px 10px 30px #030c0e;
+    overflow: hidden;
+    padding: 10px;
 }
 
-#department_table thead {
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
     color: #fff;
 }
 
-#department_table_data {
+thead,
+tbody {
     color: #fff;
+    padding: 15px 10px;
+    border-bottom: 1px solid;
+    text-align: left;
+    cursor: default;
 }
 
 
@@ -540,16 +570,9 @@ select {
     height: 100vh;
 }
 
+
 /* mobile responsive */
 @media (max-width:768px) {
-
-    .department_management,
-    .teacher_management,
-    .announcement_management,
-    .failed_request_management,
-    .faq_management {
-        max-width: 320px;
-    }
 
     input,
     select {
@@ -586,6 +609,7 @@ button:active {
     transition: .3s;
 }
 
+#department_table,
 #teacher_table,
 #announcement_table,
 #failed_request_table,
@@ -594,6 +618,8 @@ button:active {
     overflow-y: auto;
     max-height: 600px;
     padding: 10px;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
 }
 
 
@@ -604,7 +630,7 @@ td {
 
 th,
 td {
-    border-bottom: solid 2px #868686;
+    border-bottom: solid 1px #868686;
 }
 
 
@@ -637,4 +663,46 @@ td {
 
 ::-webkit-scrollbar-corner {
     border-radius: 5px;
+}
+
+#action_div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    margin: 0 4px;
+    font-size: 13px;
+    box-shadow: 10px 10px 20px #030c0e;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background-color: #82B1FF;
+}
+
+.delete-btn {
+    background-color: #F28B82;
+}
+
+.edit-btn:hover {
+    background-color: #6297FF;
+    font-size: 13px;
+}
+
+.delete-btn:hover {
+    background-color: #EE675C;
+    font-size: 13px;
 }
