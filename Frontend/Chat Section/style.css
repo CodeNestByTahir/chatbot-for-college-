@@ -222,6 +222,36 @@ li,a {
     cursor: pointer;
 }
 
+/*Scorll bar colour */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #030c0e;
+    border-radius: 7px;
+    margin: 20px 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #124a59;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #103f4d;
+    transition: ease-in-out .1s;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    border-radius: 5px;
+}
+
 /* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
     .main {
@@ -252,9 +282,13 @@ li,a {
     /* Show hamburger */
     .menu-btn{
         display: block;
+        position:absolute;
+        left: 5px;
+        top:50%;
+        transform:translateY(-50%);
         font-size: 30px;
         cursor: pointer;
-        margin-right: 15px;
+        margin:0 10px;
         color: #0de499;
     }
 
@@ -266,13 +300,16 @@ li,a {
     .header {
         width: 100%;
         margin: 0;
+        padding:0 40px;
         border-radius: 0;
         justify-content: flex-start;
         justify-content: center;
+        position:relative;
     }
 
     .logo{
-        margin: 0 3px 0 0;
+        margin: 0 7px;
+        aspect-ratio:1/1;
     }
     .header-text h2 {
         font-size: 15px;
