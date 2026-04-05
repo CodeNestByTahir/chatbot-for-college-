@@ -4,57 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login | Shri Saibaba College Assistant</title>
-
+    <title>Admin Login | Campus Buddy</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="icon" href="./Assets/seniorclglogo.jpeg">
 </head>
 
 <body>
 
+    <!-- ====================================================
+    AUTHENTICATION SECTION
+    ==================================================== -->
     <div class="admin_authentication">
+
+        <!-- LOGIN FORM -->
         <div id="admin_login">
             <h1>LOGIN</h1>
             <form action="">
-                <input type="text" id="login_email" placeholder="enter Admin email" autocomplete="username" required>
-                <input type="password" id="password" placeholder="enter password" autocomplete="current-password"
-                    required>
+                <input type="text" id="login_email" placeholder="Enter Admin Email" autocomplete="username" required>
+                <input type="password" id="password" placeholder="Enter Password" autocomplete="current-password" required>
                 <br><button id="lg_btn">Login</button>
-                <p id="forget_password">Forget password</p>
+                <p id="forget_password">Forget Password</p>
             </form>
         </div>
 
+        <!-- FORGET PASSWORD FORM -->
         <div id="reset_pass">
             <h1>Password Reset</h1>
             <form action="">
-                <p id="pass_reset_p">Enter your email to reset code</p>
-                <input type="text" id="reset_email" placeholder="Admin email" autocomplete="username" required>
+                <p id="pass_reset_p">Enter your email to receive OTP</p>
+                <input type="text" id="reset_email" placeholder="Admin Email" autocomplete="username" required>
                 <button id="request_otp">REQUEST OTP</button>
                 <p id="back_to_login">Back to Login</p>
             </form>
         </div>
 
+        <!-- OTP + NEW PASSWORD FORM -->
         <div id="otp_pass">
             <h1>Enter OTP & New Password</h1>
             <form action="">
-                <input type="text" id="reset_email" placeholder="enter Admin email" autocomplete="username" required>
-                <input type="text" id="otp" placeholder="enter OTP" required>
+                <input type="text" id="otp_reset_email" placeholder="Enter Admin Email" autocomplete="username" required>
+                <input type="text" id="otp" placeholder="Enter OTP" required>
                 <input type="text" id="new_password" placeholder="New Password" required>
                 <button id="reset_password_btn">RESET PASSWORD</button>
             </form>
         </div>
+
     </div>
 
+    <!-- ====================================================
+    DASHBOARD (visible after login)
+    ==================================================== -->
     <div id="after_successfull_login">
+
+        <!-- ==================== DEPARTMENT MANAGEMENT ==================== -->
         <div class="department_management">
             <h2>Department Management</h2>
             <hr>
-            <form action="" id="department" method="get">
-                <input type="text" hidden id="real_department_id" placeholder="Real department ID">
+            <form id="department">
+                <input type="text" hidden id="real_department_id">
                 <input type="text" id="department_name" placeholder="Department Name (e.g., Computer Science)" required>
                 <button type="submit" id="add_department">Add Department</button>
             </form>
-
             <div id="department_table">
                 <table>
                     <thead>
@@ -65,26 +75,21 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="department_table_data">
-                    </tbody>
+                    <tbody id="department_table_data"></tbody>
                 </table>
             </div>
         </div>
 
-        <!-- end of department management -->
-
-        <!-- start of teacher management -->
+        <!-- ==================== TEACHER MANAGEMENT ==================== -->
         <div class="teacher_management">
-
             <h2>Teacher Management</h2>
             <hr>
-            <form action="" id="teacher_form">
-                <input type="text" hidden id="real_teacher_id" placeholder="Real Teacher ID">
+            <form id="teacher_form">
+                <input type="text" hidden id="real_teacher_id">
                 <input class="inp_2" type="text" id="teacher_name" placeholder="Teacher Name" required>
-                <input class="inp_2" type="text" id="teacher_designation" placeholder="Designation (e.g., HOD)"
-                    required>
+                <input class="inp_2" type="text" id="teacher_designation" placeholder="Designation (e.g., HOD)" required>
                 <select class="inp_2" id="teacher_dept_select">
-                    <option class="inp_2" value="">Select Department</option>
+                    <option value="">Select Department</option>
                 </select>
                 <input class="inp_2" type="text" id="teacher_email" placeholder="Email" required>
                 <input class="inp_2" type="text" id="teacher_contact_number" placeholder="Contact Number" required>
@@ -104,30 +109,25 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-
-                    <tbody id="teacher_table_data">
-                    </tbody>
+                    <tbody id="teacher_table_data"></tbody>
                 </table>
             </div>
         </div>
-        <!-- end of teacher management -->
 
-
-        <!-- start of announcement management -->
+        <!-- ==================== ANNOUNCEMENT MANAGEMENT ==================== -->
         <div class="announcement_management">
             <h2>Announcement Management</h2>
             <hr>
             <form id="announcement_form">
-                <input type="text" hidden id="real_announcement_id" placeholder="Real department ID">
-                <input class="inp_2" type="text" id="title" placeholder="Title">
-                <input class="inp_2" type="text" id="description" placeholder="Description">
-                <input class="inp_2" type="date" name="" id="date" placeholder="select date" required>
+                <input type="text" hidden id="real_announcement_id">
+                <input class="inp_2" type="text" id="title" placeholder="Title" required>
+                <input class="inp_2" type="text" id="description" placeholder="Description" required>
+                <input class="inp_2" type="date" id="date" required>
                 <button id="add_announcement">Add Announcement</button>
             </form>
-
             <div id="announcement_table">
                 <table>
-                    <tHead>
+                    <thead>
                         <tr>
                             <th hidden>Real ID</th>
                             <th>Title</th>
@@ -135,19 +135,13 @@
                             <th>End Date</th>
                             <th>Actions</th>
                         </tr>
-                    </tHead>
-
-                    <tBody id="announcement_table_data">
-                    </tBody>
-
+                    </thead>
+                    <tbody id="announcement_table_data"></tbody>
                 </table>
             </div>
-
         </div>
-        <!-- end of announcement management -->
 
-
-        <!-- start of failed reqest management -->
+        <!-- ==================== FAILED REQUEST MANAGEMENT ==================== -->
         <div class="failed_request_management">
             <h2>Failed Request Management</h2>
             <hr>
@@ -157,42 +151,31 @@
                         <tr>
                             <th hidden>Real ID</th>
                             <th>ID</th>
-                            <th>Request</th>
+                            <th>Student Request</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
-
-                    <tbody id="failed_request_table_data">
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>What is the college Name</td>
-                            <td>ADD Request</td>
-                        </tr>
-                    </tbody>
+                    <tbody id="failed_request_table_data"></tbody>
                 </table>
             </div>
         </div>
-        <!-- end of failed reqest management -->
 
-
-        <!-- start of FAQ management -->
+        <!-- ==================== FAQ MANAGEMENT ==================== -->
         <div class="faq_management">
             <h2>FAQs Management</h2>
             <hr>
             <form id="faq_form">
-                <input type="text" hidden id="real_faq_id" placeholder="Real department ID">
+                <input type="text" hidden id="real_faq_id">
                 <input class="inp_2" id="question" type="text" placeholder="Question" required>
                 <input class="inp_2" id="answer" type="text" placeholder="Answer" required>
-                <input class="inp_2" id="intents" type="text" placeholder="Intents / Keywords" required>
+                <input class="inp_2" id="intents" type="text" placeholder="Intents / Keywords (comma separated)" required>
                 <button id="add_faq">Add FAQ</button>
             </form>
-
             <div id="faq_table">
                 <table>
                     <thead>
                         <tr>
-                            <td hidden>Real ID</td>
+                            <th hidden>Real ID</th>
                             <th>ID</th>
                             <th>Question</th>
                             <th>Answer</th>
@@ -200,23 +183,39 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-
-                    <tbody id="faq_table_data">
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>what is the college Name</td>
-                            <td>The college name is shri sai baba college shirdi.</td>
-                            <td>Clg Name</td>
-                            <td>DELETE</td>
-                        </tr>
-                    </tbody>
+                    <tbody id="faq_table_data"></tbody>
                 </table>
             </div>
         </div>
-        <!-- Endof FAQ management -->
-    </div>
+
+        <!-- ==================== IMPORTANT LINKS MANAGEMENT ==================== -->
+        <div class="important_links_management">
+            <h2>Important Links Management</h2>
+            <hr>
+            <form id="links_form">
+                <input type="text" hidden id="real_link_id">
+                <input class="inp_2" id="link_name" type="text" placeholder="Link Name (e.g., University Portal)" required>
+                <input class="inp_2" id="link_url" type="text" placeholder="URL (e.g., https://unipune.ac.in)" required>
+                <button id="add_link">Add Link</button>
+            </form>
+            <div id="links_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th hidden>Real ID</th>
+                            <th>ID</th>
+                            <th>Link Name</th>
+                            <th>URL</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="links_table_data"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div><!-- end #after_successfull_login -->
+
     <script src="admin.js"></script>
 </body>
-
 </html>
